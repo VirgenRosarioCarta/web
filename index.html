@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Festividad Virgen del Rosario</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="background-music" loop src="cancion_rosario.wav"></audio>
+
+    <div class="card-container">
+        <div class="card" id="invitationCard">
+            <div class="card-inner">
+                <div class="card-front">
+                    </div>
+                <div class="card-back">
+                    <div class="card-back-content">
+                        
+                        <div class="invitation-header">
+                            <h1 id="event-title"></h1>
+                            <h2 id="event-subtitle"></h2>
+                        </div>
+                        
+                        <div class="alferados-section" id="alferados-list">
+                        </div>
+
+                        <div class="location-section">
+                             <p id="event-location"></p>
+                        </div>
+                        
+                        <div class="program-section">
+                            <h3>Programa</h3>
+                            <p id="event-date"></p>
+                            <ul id="program-list"></ul>
+                        </div>
+                        
+                        <p class="closing-message" id="event-closing"></p>
+
+                        <div class="virgin-image-placeholder"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="image-modal" class="modal">
+        <div class="modal-content">
+            <div class="prayer-content">
+                <h3>Oración</h3>
+                <p>Oren unos por otros para que sean sanados.<br>La oración es justa, poderosa y eficaz.<br>Madre, me deleito en tu palabra, medito en ella de día y de noche; tú haces próspero mi camino, en tu nombre Señor tengo una mente renovada y un nuevo entusiasmo.<br>Amen.</p>
+                <div class="final-greeting">Te Esperamos</div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

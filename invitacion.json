@@ -1,0 +1,20 @@
+{
+    "title": "Festividad en Honor a la Stma Virgen del Rosario",
+    "subtitle": "Alferados 2025",
+    "alferados": [
+        "H. Vitaliano Zenteno Santodomingo",
+        "Noelia Cedano Silva e Hijos"
+    ],
+    "location": "Local Calle Amazonas C-13, lugar Ref. Soldado Desconocido",
+    "program": {
+        "date": "Sábado 04 de Octubre",
+        "events": [
+            { "time": "12:00 a.m.", "description": "Misa en Honor a la Virgen del Rosario" },
+            { "time": "2:00 a 3:00 p.m.", "description": "Mariachis" },
+            { "time": "3:00 a 5:00 p.m.", "description": "Grupo Musical" },
+            { "time": "5:00 a 9:00 p.m.", "description": "Grupo Musical" },
+            { "time": "9:00 a 12:00 m.", "description": "Grupo Musical" }
+        ]
+    },
+    "closing": "Agradecemos anticipadamente su gentil participación"
+}

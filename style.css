@@ -1,0 +1,209 @@
+/* Importar fuentes elegantes */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: #fdfaf3;
+    font-family: 'EB Garamond', serif;
+    overflow: hidden;
+    color: #6a4a3a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor para la perspectiva 3D */
+.card-container {
+    perspective: 2000px;
+}
+
+/* La tarjeta en sí, que responderá al clic */
+.card {
+    width: 700px;
+    height: 500px; 
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    /* Eliminada la transición de transform para que no se mueva */
+}
+
+/* Contenedor interno que aplicará la transformación 3D */
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Modificado: El origen de la transformación es el centro */
+    transform-origin: center;
+}
+
+/* Clase que se añade con JS para animar la tarjeta */
+/* Modificado: Se elimina el translateY para que la tarjeta se quede en el centro */
+.card.is-flipped .card-inner {
+    transform: rotateY(-180deg);
+}
+
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+}
+
+.card-front {
+    background-image: url('marco2.png'); /* Asegúrate de tener esta imagen */
+}
+
+.card-back {
+    background-image: url('marco.png'); /* Asegúrate de tener esta imagen */
+    transform: rotateY(180deg);
+    padding: 25px 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back-content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.invitation-header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    color: #c88a8a;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.invitation-header h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #b5651d;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* Modificado: Estilos para el nuevo encabezado "Te Esperamos" */
+.alferados-section h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem; /* Más grande */
+    color: #b5651d;
+    margin: 10px 0 15px 0;
+    text-align: center; /* Centrado */
+}
+
+.alferados-section p {
+    margin: 2px 0;
+}
+
+.location-section p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.program-section {
+    margin-bottom: 20px;
+}
+
+.program-section h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #b5651d;
+    margin-bottom: 5px;
+}
+
+.program-section p {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.program-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.program-section ul li {
+    margin-bottom: 3px;
+}
+
+.closing-message {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.virgin-image-placeholder {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 200px;
+    height: 150px;
+}
+
+/* --- Nuevo: Estilos para el Modal de la Imagen --- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-image: url('tarjeta_trasera.jpg'); /* Tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 650px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    text-align: center;
+    color: #5d4435;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.prayer-content h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #7b5a49;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.prayer-content p {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.prayer-content .final-greeting {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #7b5a49;
+    margin-top: 20px;
+}
